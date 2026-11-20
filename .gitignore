@@ -1,0 +1,10 @@
+# Market data is never committed (licensing; size). Manifests with hashes are.
+user_data/data/
+user_data/backtest_results/
+user_data/logs/
+runs/
+*.sqlite
+__pycache__/
+.pytest_cache/
+.venv/
+.env

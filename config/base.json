@@ -1,0 +1,45 @@
+{
+  "$comment": "Template. study/run.py fills strategy, timeframe, pairs, fee, datadir and study_params per run.",
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "dry_run": true,
+  "dry_run_wallet": 500,
+  "stake_currency": "USD",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 1.0,
+  "max_open_trades": 2,
+  "fiat_display_currency": "",
+  "timeframe": "1d",
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": false,
+    "price_last_balance": 0.0
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": false
+  },
+  "exchange": {
+    "name": "kraken",
+    "key": "",
+    "secret": "",
+    "pair_whitelist": [
+      "BTC/USD",
+      "ETH/USD"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "dataformat_ohlcv": "feather",
+  "force_entry_enable": false,
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "bot_name": "edge-study",
+  "user_data_dir": "user_data",
+  "strategy_path": "user_data/strategies"
+}

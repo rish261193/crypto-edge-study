@@ -1,0 +1,18 @@
+{
+  "$comment": "Pre-registered grid (PREREGISTRATION.md). 3 families x 2 timeframes x 3 values = 18 configurations. Do not edit after the pre-registration commit.",
+  "timeframes": ["4h", "1d"],
+  "families": {
+    "TrendDonchian": {"param": "n", "values": [20, 55, 100]},
+    "VolBreakout": {"param": "m", "values": [1.0, 1.5, 2.0]},
+    "MeanReversion": {"param": "threshold", "values": [5, 10, 20]}
+  },
+  "fee_scenarios": {
+    "base": 0.0085,
+    "optimistic": 0.0065,
+    "gross": 0.0
+  },
+  "universes": {
+    "primary": {"pairs": ["BTC/USD", "ETH/USD"], "max_open_trades": 2},
+    "support": {"pairs": ["LTC/USD", "LINK/USD", "XRP/USD", "ADA/USD", "SOL/USD", "DOT/USD"], "max_open_trades": 6}
+  }
+}
