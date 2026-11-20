@@ -111,8 +111,13 @@ def test_in_sample_verdict_rules(mean, pct, trades, expected):
 def test_final_verdict_requires_holdout_only_for_passes():
     assert S.final_verdict("FAIL", None, None) == "FAIL"
     assert S.final_verdict("INCONCLUSIVE", None, None) == "INCONCLUSIVE"
-    assert S.final_verdict("PASS_INSAMPLE", 0.001, 0.0) == "PASS"
+    assert S.final_verdict("PASS_INSAMPLE", 0.001, -0.0005) == "PASS"
+    # amendment 1: a losing final year inside normal bad luck is not a pass
+    assert S.final_verdict("PASS_INSAMPLE", -0.0001, -0.0005) == "INCONCLUSIVE"
+    assert S.final_verdict("PASS_INSAMPLE", 0.0, -0.0005) == "INCONCLUSIVE"
     assert S.final_verdict("PASS_INSAMPLE", -0.002, -0.001) == "FAIL"
+    # profitable but far below its own history is still unusually bad
+    assert S.final_verdict("PASS_INSAMPLE", 0.0001, 0.0003) == "FAIL"
     with pytest.raises(ValueError):
         S.final_verdict("PASS_INSAMPLE", None, None)
 

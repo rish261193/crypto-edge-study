@@ -159,11 +159,15 @@ def in_sample_verdict(r: np.ndarray, n_trades: int, model_mean: float,
 
 
 def final_verdict(in_sample: str, holdout_mean: float | None, floor: float | None) -> str:
+    """Amendment 1: below the bad-luck floor -> FAIL; at or above it, the final year
+    must also be profitable after fees to PASS, otherwise INCONCLUSIVE."""
     if in_sample != "PASS_INSAMPLE":
         return in_sample
     if holdout_mean is None or floor is None:
         raise ValueError("Holdout needed for configurations that passed in-sample")
-    return "PASS" if holdout_mean >= floor else "FAIL"
+    if holdout_mean < floor:
+        return "FAIL"
+    return "PASS" if holdout_mean > 0 else "INCONCLUSIVE"
 
 
 def reality_check_pvalue(real_means: dict[str, float], null_tables: dict[str, np.ndarray]) -> float:

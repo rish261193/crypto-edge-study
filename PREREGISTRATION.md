@@ -74,7 +74,11 @@ Otherwise the verdict is **FAIL** if the mean daily net return is 0 or below, or
 
 - **Who and when:** this runs only after the in-sample results are committed, and only for configurations that are PASS_INSAMPLE.
 - **The test:** each such configuration is backtested on the sealed year with unchanged code and parameters.
-- **The verdict:** **PASS** if its mean daily net return is at least the 5th percentile of 10,000 block-bootstrapped 365-day means drawn from its own in-sample days. Otherwise **FAIL**.
+- **The bad-luck floor:** the 5th percentile of 10,000 block-bootstrapped 365-day means drawn from the configuration's own in-sample days.
+- **The verdict (as amended, see Amendment 1):**
+    - **FAIL** if the final year's mean daily net return is below the floor;
+    - **PASS** if it is at or above the floor **and above 0** (profitable after fees);
+    - **INCONCLUSIVE** if it is at or above the floor but 0 or below.
 - **No reuse:** the holdout is never used again.
 
 INCONCLUSIVE and FAIL mean no money is committed.
@@ -105,4 +109,4 @@ INCONCLUSIVE and FAIL mean no money is committed.
 
 ## Amendments
 
-None yet.
+**Amendment 1 (2026-11-20, before any real market data was downloaded).** A rehearsal on synthetic data showed that the original holdout rule passed a final year that lost money and had only 4 trades, because a weak edge's bad-luck floor is below zero. The owner approved this change: the final year must also be profitable after fees to PASS. A final year at or above the floor that does not make money is now INCONCLUSIVE instead of PASS. The FAIL condition is unchanged.
