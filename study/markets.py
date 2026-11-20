@@ -25,6 +25,7 @@ def main() -> int:  # pragma: no cover - network entry point
     kraken = ccxt.kraken()
     markets = kraken.load_markets()
     out = Path("data/markets_kraken.json")
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(snapshot(markets, PRIMARY_PAIRS + SUPPORT_PAIRS), indent=1, default=str) + "\n")
     return 0
 
