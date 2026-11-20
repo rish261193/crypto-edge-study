@@ -1,0 +1,118 @@
+{
+  "source": {
+    "venue": "Coinbase Exchange public candles",
+    "ccxt_id": "coinbaseexchange",
+    "ccxt_version": "4.5.93",
+    "retrieved_utc": "2026-11-20T21:44:58.821987+00:00",
+    "timeframe": "1h"
+  },
+  "data_end_exclusive": "2026-11-20T00:00:00+00:00",
+  "holdout_start": "2025-11-20T00:00:00+00:00",
+  "pairs": {
+    "BTC/USD": {
+      "first_candle": "2015-07-20T21:00:00+00:00",
+      "insample_hours": 90553,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 90603,
+        "missing_hours": 50,
+        "missing_share": 0.000552,
+        "longest_gap_hours": 15
+      },
+      "insample_sha256": "24358b51ff5b0239b003be79ee9e96c4474fd7702340a423bf8197fd0cfb5b30",
+      "holdout_sha256": "3512f5be42f7de2c529205905c9bad49dd92f91009e065bc9dd923595b81f08c"
+    },
+    "ETH/USD": {
+      "first_candle": "2016-05-18T00:00:00+00:00",
+      "insample_hours": 83144,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 83352,
+        "missing_hours": 208,
+        "missing_share": 0.002495,
+        "longest_gap_hours": 65
+      },
+      "insample_sha256": "55ecf8e1512c2987ba38185f2e47fc110198f5f67707ae22a97528cfada50ce8",
+      "holdout_sha256": "4be5fd7777cc1db52662643cd44b1aff74ee7fd2f6093ecee5801c1a9094ca47"
+    },
+    "LTC/USD": {
+      "first_candle": "2016-08-17T04:00:00+00:00",
+      "insample_hours": 80076,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 81164,
+        "missing_hours": 1088,
+        "missing_share": 0.013405,
+        "longest_gap_hours": 43
+      },
+      "insample_sha256": "6d038acc2bff047d130d06d37c624f5b1a945954b6bbef7b1aa146fa8ee903cd",
+      "holdout_sha256": "10142d43a6911fa7aff025a59ef42680a623ee16e160b9814aef9de23ac85637"
+    },
+    "LINK/USD": {
+      "first_candle": "2019-06-27T16:00:00+00:00",
+      "insample_hours": 56080,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 56096,
+        "missing_hours": 16,
+        "missing_share": 0.000285,
+        "longest_gap_hours": 5
+      },
+      "insample_sha256": "abd6a06b5e76411253137ca970c81b735b5ee345d074411864e9f14fc58c773c",
+      "holdout_sha256": "c50cac99f365220f2ecd0435d77a5c12bb267d60ed1c763ea1475a192ecc3c55"
+    },
+    "XRP/USD": {
+      "first_candle": "2019-02-26T17:00:00+00:00",
+      "insample_hours": 37268,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 58999,
+        "missing_hours": 21731,
+        "missing_share": 0.368328,
+        "longest_gap_hours": 21721
+      },
+      "insample_sha256": "4606576766f17b98a6e6c641d87db8b75d313648bb8984445a5ae5aad3c2d415",
+      "holdout_sha256": "112f33786026e952d1f190d587f7bcc55911b4cb72568ce2af835c0dd3a44b11"
+    },
+    "ADA/USD": {
+      "first_candle": "2021-03-18T16:00:00+00:00",
+      "insample_hours": 40966,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 40976,
+        "missing_hours": 10,
+        "missing_share": 0.000244,
+        "longest_gap_hours": 5
+      },
+      "insample_sha256": "2435a7cb39595cb0dd538899173a24f27eaa914b4254e145d75c5cc445aee6b3",
+      "holdout_sha256": "c7c520058e23141b51b21f074e4266711d8b222baea813c125cb7f6d4d96c03f"
+    },
+    "SOL/USD": {
+      "first_candle": "2021-06-17T16:00:00+00:00",
+      "insample_hours": 38782,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 38792,
+        "missing_hours": 10,
+        "missing_share": 0.000258,
+        "longest_gap_hours": 5
+      },
+      "insample_sha256": "f03cfa43bde71e18b9e2bcc3c79358a6e85e9f3fca685e110e521a20ca719d9d",
+      "holdout_sha256": "fffa61a56513a3f596481343c2870bb695e187e6be72531c9d8b05672a67c6e2"
+    },
+    "DOT/USD": {
+      "first_candle": "2021-06-16T16:00:00+00:00",
+      "insample_hours": 38806,
+      "holdout_hours": 8755,
+      "insample_gaps": {
+        "expected_hours": 38816,
+        "missing_hours": 10,
+        "missing_share": 0.000258,
+        "longest_gap_hours": 5
+      },
+      "insample_sha256": "355cdfc3caca6a71c81c657956d80fb5ebb89dc1e76e9b8302fe86cd05d04081",
+      "holdout_sha256": "652d649176aee89964c500ccfb8e1547fc8c6e4dae551d9a4f36944b876e5cc5"
+    }
+  },
+  "quality_problems": []
+}

@@ -1,0 +1,46 @@
+{
+ "lookahead": [
+  {
+   "config": "TrendDonchian-n55-4h",
+   "has_bias": false,
+   "total_signals": "20",
+   "biased_entry_signals": "0",
+   "biased_exit_signals": "0"
+  },
+  {
+   "config": "TrendDonchian-n55-1d",
+   "has_bias": false,
+   "total_signals": "20",
+   "biased_entry_signals": "0",
+   "biased_exit_signals": "0"
+  },
+  {
+   "config": "VolBreakout-m1.5-4h",
+   "has_bias": false,
+   "total_signals": "20",
+   "biased_entry_signals": "0",
+   "biased_exit_signals": "0"
+  },
+  {
+   "config": "VolBreakout-m1.5-1d",
+   "has_bias": false,
+   "total_signals": "20",
+   "biased_entry_signals": "0",
+   "biased_exit_signals": "0"
+  },
+  {
+   "config": "MeanReversion-threshold10-4h",
+   "has_bias": false,
+   "total_signals": "20",
+   "biased_entry_signals": "0",
+   "biased_exit_signals": "0"
+  },
+  {
+   "config": "MeanReversion-threshold10-1d",
+   "has_bias": false,
+   "total_signals": "20",
+   "biased_entry_signals": "0",
+   "biased_exit_signals": "0"
+  }
+ ]
+}
