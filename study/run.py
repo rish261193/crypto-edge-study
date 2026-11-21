@@ -87,9 +87,16 @@ def run_backtest(spec: RunSpec, datadir: Path, markets: Path, out: Path,
 
 
 def load_trades(results_dir: Path):
+    """Load the single result file in a run directory.
+
+    Reads the zip directly instead of Freqtrade's hidden `.last_result.json` index,
+    which GitHub artifact uploads leave out."""
     from freqtrade.data.btanalysis import load_backtest_data
 
-    return load_backtest_data(results_dir)
+    zips = sorted(Path(results_dir).glob("*.zip"))
+    if len(zips) != 1:
+        raise RuntimeError(f"Expected exactly one result file in {results_dir}, found {len(zips)}")
+    return load_backtest_data(zips[0])
 
 
 def run_bias_checks(spec: RunSpec, datadir: Path, markets: Path, out: Path,

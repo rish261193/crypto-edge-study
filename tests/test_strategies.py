@@ -111,3 +111,15 @@ def test_planned_risk_never_exceeds_one_percent_of_equity(synthetic_backtest):
 def test_fees_are_charged_on_both_legs(synthetic_backtest):
     t = synthetic_backtest["TrendDonchian"]
     assert (t["fee_open"] == 0.0085).all() and (t["fee_close"] == 0.0085).all()
+
+
+def test_trades_load_without_freqtrades_hidden_index(tmp_path, synthetic_backtest):
+    """GitHub artifacts drop dotfiles; loading must not depend on .last_result.json."""
+    import shutil
+    from study import run as R
+    src = next(p for p in Path(tmp_path).parent.glob("bt*/runs/*/results"))
+    dst = tmp_path / "results"
+    shutil.copytree(src, dst)
+    for hidden in dst.glob(".*"):
+        hidden.unlink()
+    assert len(R.load_trades(dst)) > 0
