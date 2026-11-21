@@ -1,0 +1,98 @@
+{
+ "holdout_window": [
+  "2025-11-20T00:00:00+00:00",
+  "2026-11-20T00:00:00+00:00"
+ ],
+ "configs": {
+  "TrendDonchian-n20-4h": {
+   "in_sample_verdict": "PASS_INSAMPLE",
+   "holdout_mean_daily": -0.0007336920966568697,
+   "holdout_floor": -0.0005548743492966989,
+   "holdout_trades": 67,
+   "final_verdict": "FAIL"
+  },
+  "TrendDonchian-n20-1d": {
+   "in_sample_verdict": "INCONCLUSIVE",
+   "final_verdict": "INCONCLUSIVE"
+  },
+  "TrendDonchian-n55-4h": {
+   "in_sample_verdict": "PASS_INSAMPLE",
+   "holdout_mean_daily": -0.0002721075761819548,
+   "holdout_floor": -0.00048487504294745,
+   "holdout_trades": 25,
+   "final_verdict": "INCONCLUSIVE"
+  },
+  "TrendDonchian-n55-1d": {
+   "in_sample_verdict": "INCONCLUSIVE",
+   "final_verdict": "INCONCLUSIVE"
+  },
+  "TrendDonchian-n100-4h": {
+   "in_sample_verdict": "PASS_INSAMPLE",
+   "holdout_mean_daily": -0.0002322370813960705,
+   "holdout_floor": -0.0003226194952841667,
+   "holdout_trades": 17,
+   "final_verdict": "INCONCLUSIVE"
+  },
+  "TrendDonchian-n100-1d": {
+   "in_sample_verdict": "INCONCLUSIVE",
+   "final_verdict": "INCONCLUSIVE"
+  },
+  "VolBreakout-m1-4h": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "VolBreakout-m1-1d": {
+   "in_sample_verdict": "PASS_INSAMPLE",
+   "holdout_mean_daily": -7.89924718710123e-05,
+   "holdout_floor": -0.00020338912461728172,
+   "holdout_trades": 26,
+   "final_verdict": "INCONCLUSIVE"
+  },
+  "VolBreakout-m1.5-4h": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "VolBreakout-m1.5-1d": {
+   "in_sample_verdict": "PASS_INSAMPLE",
+   "holdout_mean_daily": -0.00010622453815330854,
+   "holdout_floor": -0.00015612845537900898,
+   "holdout_trades": 13,
+   "final_verdict": "INCONCLUSIVE"
+  },
+  "VolBreakout-m2-4h": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "VolBreakout-m2-1d": {
+   "in_sample_verdict": "PASS_INSAMPLE",
+   "holdout_mean_daily": 7.044360878031738e-05,
+   "holdout_floor": -8.54524719599287e-05,
+   "holdout_trades": 4,
+   "final_verdict": "PASS"
+  },
+  "MeanReversion-threshold5-4h": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "MeanReversion-threshold5-1d": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "MeanReversion-threshold10-4h": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "MeanReversion-threshold10-1d": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "MeanReversion-threshold20-4h": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  },
+  "MeanReversion-threshold20-1d": {
+   "in_sample_verdict": "FAIL",
+   "final_verdict": "FAIL"
+  }
+ }
+}
